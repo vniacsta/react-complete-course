@@ -1,7 +1,7 @@
-import ExpenseItem from './components/ExpenseItem';
+import Expenses from './components/Expenses/Expenses';
 
-export default function App() {
-  const expenseList = [
+const App = () => {
+  const expensesList = [
     {
       title: 'Title 1',
       amount: '10',
@@ -22,21 +22,9 @@ export default function App() {
   return (
     <div>
       <h1>Expenses List</h1>
-      <ExpenseItem 
-        title={expenseList[0].title}
-        amount={expenseList[0].amount}
-        date={expenseList[0].date}
-      />
-      <ExpenseItem 
-        title={expenseList[1].title}
-        amount={expenseList[1].amount}
-        date={expenseList[1].date}
-      />
-      <ExpenseItem 
-        title={expenseList[2].title}
-        amount={expenseList[2].amount}
-        date={expenseList[2].date}
-      />
+      <Expenses items={expensesList} />
     </div>
   );
 }
+
+export default App;
